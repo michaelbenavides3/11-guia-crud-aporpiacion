@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestión de tareas - crud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>administrador de tareas</h1>
+    </header>
+
+    <main class="contenedor-principal">
+        
+        <!-- sección para ver ids disponibles -->
+        <section class="seccion-ids">
+            <h3>usuarios con tareas:</h3>
+            <ul class="id__disponibles">
+                <!-- los ids se cargan aquí automáticamente -->
+            </ul>
+        </section>
+
+        <!-- formulario de búsqueda -->
+        <section class="busqueda">
+            <form class="formulario__buscar">
+                <label>buscar por id de usuario:</label>
+                <input type="number" class="id" placeholder="ej: 1" required>
+                <button type="submit">buscar tareas</button>
+            </form>
+        </section>
+
+        <!-- contenedor donde se muestran las tareas -->
+        <section class="panel-tareas">
+            <h3>listado de tareas</h3>
+            <div class="contenedor__tareas">
+                <!-- las tareas aparecerán aquí -->
+            </div>
+        </section>
+
+        <!-- sección de acciones (se activa al encontrar un usuario) -->
+        <section class="modificar">
+            <div class="tarjeta-accion">
+                <h4>añadir nueva tarea</h4>
+                <input type="text" class="Agregar__tarea" placeholder="nombre de la tarea">
+                <button class="agregar__tareas">guardar tarea</button>
+            </div>
+
+            <div class="tarjeta-accion">
+                <h4>modificar título</h4>
+                <input type="number" class="Modificacion__tareaid" placeholder="id de la tarea">
+                <input type="text" class="Modificacion__tarea" placeholder="nuevo nombre">
+                <button class="modificar__tareas">actualizar</button>
+            </div>
+
+            <div class="tarjeta-accion">
+                <h4>eliminar tarea</h4>
+                <input type="number" class="eliminacion__tarea" placeholder="id de la tarea">
+                <button class="eliminar__tareas btn-peligro">eliminar</button>
+            </div>
+        </section>
+
+    </main>
+
+      <script src="app.js" type="module"></script>
+
+</body>
+</html>
